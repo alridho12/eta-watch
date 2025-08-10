@@ -237,7 +237,7 @@
             setSelect2Value(modalSelector, 'status', data.status);
             setSelect2Value(modalSelector, 'fk_id_brand', data.fk_id_brand);
             if (data.gambar) {
-                const imageUrl = `/storage/gambar-katalog/${data.gambar}`;
+                const imageUrl = `public/storage/gambar-katalog/${data.gambar}`;
                 $(`${modalSelector} #preview_gambar`).attr('src', imageUrl).show(); // tampilkan preview
                 $(`${modalSelector} [name="gambar"]`).attr('required', false);
             } else {

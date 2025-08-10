@@ -7,7 +7,7 @@
             <form method="POST" action="{{ route('login') }}">
                 @csrf <!-- Tambahkan CSRF Token -->
 
-                <img class="mb-4 mx-auto d-block" src="{{ asset('images/logos.png') }}" alt="" width="100" height="100">
+                <img class="mb-4 mx-auto d-block" src="{{ asset('public/images/logos.png') }}" alt="" width="100" height="100">
 
                 <h1 class="h3 mb-3 fw-normal">Please Login</h1>
 
