@@ -35,7 +35,7 @@ class AdminKatalogController extends Controller
             ];
         });
 
-        return view('admin.katalog.index', compact('option_brand'));
+        return view('admin.katalog.index',compact('option_brand'));
     }
 
     /**
@@ -76,11 +76,7 @@ class AdminKatalogController extends Controller
         $data = $request->validated();
 
         if ($request->hasFile('gambar')) {
-            $data['gambar'] = $this->uploadFileService->uploadFile(
-                $request->file('gambar'), // kirim langsung objek file
-                'gambar',
-                'gambar-katalog'
-            );
+            $data['gambar'] = $this->uploadFileService->uploadFile($data,'gambar', 'gambar-katalog');
         }
 
         return $this->crudService->store($data);
@@ -117,12 +113,7 @@ class AdminKatalogController extends Controller
         $row_data = Katalog::where('uuid', $uuid)->firstOrFail();
 
         if ($request->hasFile('gambar')) {
-            $data['gambar'] = $this->uploadFileService->uploadFile(
-                $request->file('gambar'), // kirim file langsung
-                'gambar',
-                'gambar-katalog',
-                $row_data->gambar // hapus gambar lama
-            );
+            $data['gambar'] = $this->uploadFileService->uploadFile($data, 'gambar', 'gambar-katalog', $row_data->gambar);
         }
 
         return $this->crudService->update($data, $uuid);
