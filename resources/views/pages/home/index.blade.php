@@ -64,7 +64,7 @@
                                     @if ($item->sales->isNotEmpty())
                                         <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
                                     @endif
-                                    <img src="{{ asset('/storage/gambar-katalog/' . $item->gambar) }}"
+                                    <img src="{{ asset('public/storage/gambar-katalog/' . $item->gambar) }}"
                                         class="card-img-top" style="height: 180px; object-fit: cover;"
                                         alt="{{ $item->nama_katalog }}">
                                 </div>

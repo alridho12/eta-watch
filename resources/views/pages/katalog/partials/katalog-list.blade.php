@@ -7,7 +7,7 @@
                     @if ($item->status == 'Sold')
                         <span class="badge bg-dark position-absolute top-0 start-0 m-2">SOLD</span>
                     @endif
-                    <img src="{{ asset('/storage/gambar-katalog/' . $item->gambar) }}" class="card-img-top" alt="">
+                    <img src="{{ asset('public/storage/gambar-katalog/' . $item->gambar) }}" class="card-img-top" alt="">
                 </div>
                 <div class="card-body text-start">
                     <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">{{ $item->nama_katalog }}</h6>
