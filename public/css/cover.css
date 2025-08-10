@@ -122,14 +122,14 @@ footer p {
 }
 
 .location {
-    background-image: url('../images/location.jpeg');
+    background-image: url('../public/images/location.jpeg');
     background-size: cover;
     background-position: center;
     height: 45vh;
 }
 
 .location-offline {
-    background-image: url('../images/location.jpeg');
+    background-image: url('../public/images/location.jpeg');
     background-size: cover;
     background-position: center;
     height: 45vh;
@@ -168,7 +168,7 @@ footer p {
 }
 
 .trone-katalog {
-    background-image: url('../images/katalog-jam.jpeg');
+    background-image: url('../public/images/katalog-jam.jpeg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -296,7 +296,7 @@ footer p {
 }
 
 .trone {
-    background-image: url('../images/trone.jpeg');
+    background-image: url('../public/images/trone.jpeg');
     background-size: cover;
     background-position: center;
     animation: moveBackground 15s ease-in-out infinite;

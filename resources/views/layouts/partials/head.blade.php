@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Custom CSS (override Bootstrap) -->
-    <link href="{{ asset('css/cover.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/css/cover.css') }}" rel="stylesheet">
 
     <!-- Google Fonts: Poppins (100 - 900) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
