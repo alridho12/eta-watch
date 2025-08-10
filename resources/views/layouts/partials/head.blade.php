@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Etawatch</title>
-    <link rel="icon" type="public/image/png" href="{{ asset('images/logos.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('public/images/logos.png') }}">
 
     <!-- Bootstrap CSS (pilih salah satu saja!) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
