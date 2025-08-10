@@ -1,7 +1,7 @@
 <header class="mb-auto w-100 position-fixed top-0 start-0 end-0 z-3 bg-dark">
     <div class="bg-black dark-shadow py-2 px-3 d-flex justify-content-md-center justify-content-between  align-items-center">
         <!-- Logo -->
-        <img class="logo" src="{{ asset('images/logos.png') }}" alt="" style="height: 40px;">
+        <img class="logo" src="{{ asset('images/logos.png') }}">
         <p class="fs-4 d-block d-md-none mb-0">ETAwatch.</p>
         <!-- Hamburger icon (only mobile) -->
         <button class="btn text-white d-md-none" id="menuToggle" style="font-size: 1.5rem;">

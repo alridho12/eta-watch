@@ -38,178 +38,81 @@
         <div class="py-md-1 d-flex flex-column justify-content-center align-items-center">
             <h5 class="fw-bold my-4 text-uppercase">Brand terpopuler</h5>
             <div class="group-brand d-flex justify-content-center align-items-center gap-4 flex-wrap ">
-                <a href="#"><img class="img-fluid brand-logo" src="{{ asset('images/brand/rolex.png') }}"
+                <a href="{{ url('/katalog') }}?brand=4"><img class="img-fluid brand-logo" src="{{ asset('images/brand/rolex.png') }}"
                         alt=""></a>
-                <a href="#"><img class="img-fluid brand-logo" src="{{ asset('images/brand/ac.png') }}"
+                <a href="{{ url('/katalog') }}?brand=13"><img class="img-fluid brand-logo" src="{{ asset('images/brand/ap.png') }}"
                         alt=""></a>
-                <a href="#"><img class="img-fluid brand-logo" src="{{ asset('images/brand/seiko.png') }}"
+                <a href="{{ url('/katalog') }}?brand=11"><img class="img-fluid brand-logo" src="{{ asset('images/brand/tag.png') }}"
                         alt=""></a>
-                <a href="#"><img class="img-fluid brand-logo" src="{{ asset('images/brand/ck.png') }}"
+                <a href="{{ url('/katalog') }}?brand=10"><img class="img-fluid brand-logo" src="{{ asset('images/brand/omega.png') }}"
                         alt=""></a>
-                <a href="#"><img class="img-fluid brand-logo" src="{{ asset('images/brand/casio.png') }}"
+                <a href="{{ url('/katalog') }}?brand=7"><img class="img-fluid brand-logo" src="{{ asset('images/brand/cartier.png') }}"
                         alt=""></a>
-                <a href="#"><img class="img-fluid brand-logo" src="{{ asset('images/brand/dw.png') }}"
+                <a href="{{ url('/katalog') }}?brand=5"><img class="img-fluid brand-logo" src="{{ asset('images/brand/patek.png') }}"
                         alt=""></a>
             </div>
         </div>
-        <div class="py-md-1 my-5 d-flex flex-column justify-content-center align-items-center">
-            <h5 class="fw-bold my-4 text-uppercase">Jam Tangan Promo</h5>
-            <div class="group-brand d-flex justify-content-center align-items-center gap-4 flex-wrap ">
-                <div class="product-promo row row-cols-2 row-cols-md-4 g-3">
-                    <div class="col">
-                        <div class="card bg-black shadow-sm border-0">
-                            <div class="position-relative">
-                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
-                                <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                    alt="Jam Tangan Expedition">
+        <div class="py-md-1 my-5">
+            <h5 class="fw-bold my-4 text-uppercase text-center">Jam Tangan Promo</h5>
+            <div class="container">
+                <div class="row g-3 justify-content-center justify-content-md-start" id="katalog-container">
+                    @foreach ($katalog_sale as $index => $item)
+                        <div class="col-6 col-md-4 col-lg-2 katalog-item {{ $index >= 6 ? 'd-none' : '' }}">
+                            <a href="{{$item->link}}" style="text-decoration: none">
+                                <div class="card bg-black shadow-sm border-0 h-100">
+                                <div class="position-relative">
+                                    @if ($item->sales->isNotEmpty())
+                                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
+                                    @endif
+                                    <img src="{{ asset('/storage/gambar-katalog/' . $item->gambar) }}"
+                                        class="card-img-top" style="height: 180px; object-fit: cover;"
+                                        alt="{{ $item->nama_katalog }}">
+                                </div>
+                                <div class="card-body text-start d-flex flex-column">
+                                    <h6 class="card-title mb-1 text-white" style="font-size: 0.85rem; min-height: 40px;">
+                                        {{ $item->nama_katalog }}
+                                    </h6>
+                                    <h6 class="card-title mb-1 text-white" style="font-size: 0.85rem; min-height: 48px;">
+                                        {{ $item->deskripsi }}
+                                    </h6>
+                                    <p class="text-light mb-1" style="font-size: 0.75rem;">
+                                        {{ $item->brand->nama_brand ?? '-' }}
+                                    </p>
+                                    @if ($item->sales->isNotEmpty())
+                                        @php
+                                            $sale = $item->sales->first();
+                                            $harga_normal = (int) str_replace(',', '', $sale->harga_normal);
+                                            $harga_sales = (int) str_replace(',', '', $sale->harga_sales);
+                                            $diskon =
+                                                $harga_normal > 0
+                                                    ? round((($harga_normal - $harga_sales) / $harga_normal) * 100)
+                                                    : 0;
+                                        @endphp
+                                        <h6 class="fw-bold text-danger mb-1">
+                                            Rp {{ number_format($harga_sales, 0, ',', '.') }}
+                                        </h6>
+                                        <p class="mb-0" style="font-size: 0.8rem;">
+                                            <s class="text-light">
+                                                Rp {{ number_format($harga_normal, 0, ',', '.') }}
+                                            </s>
+                                            <span class="text-danger ms-1">Disc. {{ $diskon }}%</span>
+                                        </p>
+                                    @else
+                                        <h6 class="fw-bold text-white mb-1">
+                                            Rp {{ number_format($item->harga, 0, ',', '.') }}
+                                        </h6>
+                                    @endif
+                                </div>
                             </div>
-                            <div class="card-body text-start">
-                                <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                    Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                                <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                                <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                                <p class="mb-0" style="font-size: 0.85rem;">
-                                    <s class="text-light text-white">Rp 2.580.000,00</s>
-                                    <span class="text-danger ms-2">Disc. 38%</span>
-                                </p>
-                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card bg-black shadow-sm border-0">
-                            <div class="position-relative">
-                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
-                                <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                    alt="Jam Tangan Expedition">
-                            </div>
-                            <div class="card-body text-start">
-                                <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                    Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                                <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                                <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                                <p class="mb-0" style="font-size: 0.85rem;">
-                                    <s class="text-light text-white">Rp 2.580.000,00</s>
-                                    <span class="text-danger ms-2">Disc. 38%</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card bg-black shadow-sm border-0">
-                            <div class="position-relative">
-                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
-                                <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                    alt="Jam Tangan Expedition">
-                            </div>
-                            <div class="card-body text-start">
-                                <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                    Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                                <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                                <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                                <p class="mb-0" style="font-size: 0.85rem;">
-                                    <s class="text-light text-white">Rp 2.580.000,00</s>
-                                    <span class="text-danger ms-2">Disc. 38%</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card bg-black shadow-sm border-0">
-                            <div class="position-relative">
-                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
-                                <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                    alt="Jam Tangan Expedition">
-                            </div>
-                            <div class="card-body text-start">
-                                <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                    Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                                <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                                <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                                <p class="mb-0" style="font-size: 0.85rem;">
-                                    <s class="text-light text-white">Rp 2.580.000,00</s>
-                                    <span class="text-danger ms-2">Disc. 38%</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card bg-black shadow-sm border-0">
-                            <div class="position-relative">
-                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
-                                <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                    alt="Jam Tangan Expedition">
-                            </div>
-                            <div class="card-body text-start">
-                                <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                    Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                                <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                                <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                                <p class="mb-0" style="font-size: 0.85rem;">
-                                    <s class="text-light text-white">Rp 2.580.000,00</s>
-                                    <span class="text-danger ms-2">Disc. 38%</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card bg-black shadow-sm border-0">
-                            <div class="position-relative">
-                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
-                                <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                    alt="Jam Tangan Expedition">
-                            </div>
-                            <div class="card-body text-start">
-                                <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                    Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                                <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                                <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                                <p class="mb-0" style="font-size: 0.85rem;">
-                                    <s class="text-light text-white">Rp 2.580.000,00</s>
-                                    <span class="text-danger ms-2">Disc. 38%</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card bg-black shadow-sm border-0">
-                            <div class="position-relative">
-                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
-                                <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                    alt="Jam Tangan Expedition">
-                            </div>
-                            <div class="card-body text-start">
-                                <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                    Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                                <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                                <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                                <p class="mb-0" style="font-size: 0.85rem;">
-                                    <s class="text-light text-white">Rp 2.580.000,00</s>
-                                    <span class="text-danger ms-2">Disc. 38%</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card bg-black shadow-sm border-0">
-                            <div class="position-relative">
-                                <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
-                                <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                    alt="Jam Tangan Expedition">
-                            </div>
-                            <div class="card-body text-start">
-                                <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                    Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                                <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                                <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                                <p class="mb-0" style="font-size: 0.85rem;">
-                                    <s class="text-light text-white">Rp 2.580.000,00</s>
-                                    <span class="text-danger ms-2">Disc. 38%</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-                <a href=""><button class="btn btn-light" type="button">Lihat Semua</button></a>
+
+                <!-- Tombol di tengah -->
+                <div class="text-center mt-4">
+                    <button class="btn btn-light" id="lihat-semua">Lihat Semua</button>
+                </div>
             </div>
         </div>
     </div>
@@ -224,3 +127,13 @@
         </div>
     </div>
 @endsection
+
+<!-- Script -->
+<script>
+    document.getElementById('lihat-semua').addEventListener('click', function() {
+        document.querySelectorAll('.katalog-item').forEach(el => {
+            el.classList.remove('d-none');
+        });
+        this.style.display = 'none';
+    });
+</script>

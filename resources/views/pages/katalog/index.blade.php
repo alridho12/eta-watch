@@ -32,34 +32,13 @@
 
                             <div class="row row-cols-2 row-cols-md-4 g-4">
                                 <!-- Daftar merek -->
-                                <div class="col"><a href="#" class="text-white text-decoration-none d-block">A.
-                                        Lange &
-                                        Söhne</a></div>
-                                <div class="col"><a href="#"
-                                        class="text-white text-decoration-none d-block">Audemars
-                                        Piguet</a></div>
-                                <div class="col"><a href="#" class="text-white text-decoration-none d-block">Baume
-                                        &
-                                        Mercier</a></div>
-                                <div class="col"><a href="#" class="text-white text-decoration-none d-block">Bell &
-                                        Ross</a></div>
-                                <div class="col"><a href="#"
-                                        class="text-white text-decoration-none d-block">Breguet</a></div>
-                                <div class="col"><a href="#"
-                                        class="text-white text-decoration-none d-block">Breitling</a></div>
-                                <div class="col"><a href="#"
-                                        class="text-white text-decoration-none d-block">Bvlgari</a></div>
-                                <div class="col"><a href="#"
-                                        class="text-white text-decoration-none d-block">Cartier</a></div>
-                                <div class="col"><a href="#"
-                                        class="text-white text-decoration-none d-block">Chopard</a></div>
-                                <div class="col"><a href="#" class="text-white text-decoration-none d-block">Franck
-                                        Muller</a></div>
-                                <div class="col"><a href="#" class="text-white text-decoration-none d-block">Grand
-                                        Seiko</a></div>
-                                <div class="col"><a href="#"
-                                        class="text-white text-decoration-none d-block">Hublot</a>
-                                </div>
+                                @foreach ($brands as $item)
+                                    <div class="brand-item col"><a href="#"
+                                            class="text-white text-decoration-none d-block brand-link"
+                                            data-brand-id="{{ $item->pk_id_brand }}">
+                                            {{ $item->nama_brand }}</a></div>
+                                @endforeach
+
                                 <!-- Tambahkan brand lainnya sesuai kebutuhan -->
                             </div>
                         </div>
@@ -73,188 +52,106 @@
                         <option value="default">Terbaru</option>
                         <option value="price-asc">Harga Terendah</option>
                         <option value="price-desc">Harga Tertinggi</option>
-                        <option value="discount">Diskon Terbesar</option>
                     </select>
                 </div>
             </div>
 
             <!-- Pagination -->
-            <nav aria-label="Page navigation" class="d-none d-md-flex">
-                <ul class="pagination pagination-dark mb-0">
-                    <li class="page-item">
-                        <a class="page-link bg-dark text-light border-0" href="#">«</a>
-                    </li>
-                    <li class="page-item"><a class="page-link bg-dark text-light border-0" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link bg-dark text-light border-0" href="#">2</a></li>
-                    <li class="page-item active">
-                        <a class="page-link bg-warning text-dark border-0" href="#">3</a>
-                    </li>
-                    <li class="page-item"><a class="page-link bg-dark text-light border-0" href="#">4</a></li>
-                    <li class="page-item disabled"><a class="page-link bg-dark text-light border-0" href="#">...</a>
-                    </li>
-                    <li class="page-item"><a class="page-link bg-dark text-light border-0" href="#">21</a></li>
-                    <li class="page-item">
-                        <a class="page-link bg-dark text-light border-0" href="#">»</a>
-                    </li>
-                </ul>
+            <nav class="pagination-container d-none d-md-flex">
+                {{ $katalog->links('pagination::bootstrap-5') }}
             </nav>
         </div>
     </section>
     <section class="container border-top">
         <h5 class="fw-bold my-4 text-uppercase text-start">Semua Koleksi</P>
         </h5>
-        <div class="group-brand d-flex justify-content-center align-items-center gap-4 flex-wrap ">
-            <div class="product-promo row row-cols-2 row-cols-md-4 g-3">
-                <div class="col">
-                    <div class="card bg-black shadow-sm border-0">
-                        <div class="position-relative">
-                            <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                alt="Jam Tangan Expedition">
-                        </div>
-                        <div class="card-body text-start">
-                            <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                            <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                            <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-black shadow-sm border-0">
-                        <div class="position-relative">
-                            <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                alt="Jam Tangan Expedition">
-                        </div>
-                        <div class="card-body text-start">
-                            <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                            <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                            <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-black shadow-sm border-0">
-                        <div class="position-relative">
-                            <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                alt="Jam Tangan Expedition">
-                        </div>
-                        <div class="card-body text-start">
-                            <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                            <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                            <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-black shadow-sm border-0">
-                        <div class="position-relative">
-                            <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                alt="Jam Tangan Expedition">
-                        </div>
-                        <div class="card-body text-start">
-                            <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                            <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                            <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-black shadow-sm border-0">
-                        <div class="position-relative">
-                            <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                alt="Jam Tangan Expedition">
-                        </div>
-                        <div class="card-body text-start">
-                            <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                            <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                            <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-black shadow-sm border-0">
-                        <div class="position-relative">
-                            <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                alt="Jam Tangan Expedition">
-                        </div>
-                        <div class="card-body text-start">
-                            <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                            <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                            <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-black shadow-sm border-0">
-                        <div class="position-relative">
-                            <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                alt="Jam Tangan Expedition">
-                        </div>
-                        <div class="card-body text-start">
-                            <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                            <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                            <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                        </div>
-                    </div>
-                </div>
-               <div class="col">
-                    <div class="card bg-black shadow-sm border-0">
-                        <div class="position-relative">
-                            <img src="{{ asset('images/produk/exp.png') }}" class="card-img-top"
-                                alt="Jam Tangan Expedition">
-                        </div>
-                        <div class="card-body text-start">
-                            <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">Jam Tangan S Expedition
-                                Chronograph E 6402 MCLURBU Men Blue Dial Brown Leather Strap</h6>
-                            <p class="text-light text-white mb-1" style="font-size: 0.8rem;">S Expedition</p>
-                            <h5 class="fw-bold text-danger mb-1">Rp 1.599.600,00</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav aria-label="Page navigation" class="d-none d-md-flex">
-                <ul class="pagination pagination-dark mb-0">
-                    <li class="page-item">
-                        <a class="page-link bg-black text-light border-0" href="#">«</a>
-                    </li>
-                    <li class="page-item"><a class="page-link bg-black text-light border-0" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link bg-black text-light border-0" href="#">2</a></li>
-                    <li class="page-item active">
-                        <a class="page-link bg-warning text-black border-0" href="#">3</a>
-                    </li>
-                    <li class="page-item"><a class="page-link bg-black text-light border-0" href="#">4</a></li>
-                    <li class="page-item disabled"><a class="page-link bg-black text-light border-0" href="#">...</a>
-                    </li>
-                    <li class="page-item"><a class="page-link bg-black text-light border-0" href="#">21</a></li>
-                    <li class="page-item">
-                        <a class="page-link bg-black text-light border-0" href="#">»</a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="mb-4">
+            <form action="" method="GET" class="d-flex" role="search">
+                <input type="text" name="search" class="form-control me-2  shadow-sm border-0"
+                    placeholder="Cari produk..." aria-label="Search">
+            </form>
+        </div>
+        <div id="katalog-list-container"
+            class="group-brand d-flex justify-content-center align-items-center gap-4 flex-wrap ">
+            @include('pages.katalog.partials.katalog-list', ['katalog' => $katalog])
+
         </div>
     </section>
 @endsection
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const toggleButton = document.getElementById('brandsToggle');
-        const closeButton = document.getElementById('closeBrandsMenu');
-        const brandsMenu = document.getElementById('brandsMenu');
+@section('js')
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.getElementById('brandsToggle');
+            const closeButton = document.getElementById('closeBrandsMenu');
+            const brandsMenu = document.getElementById('brandsMenu');
 
-        if (toggleButton && closeButton && brandsMenu) {
-            toggleButton.addEventListener('click', function() {
-                brandsMenu.classList.remove('d-none');
+            if (toggleButton && closeButton && brandsMenu) {
+                toggleButton.addEventListener('click', function() {
+                    brandsMenu.classList.remove('d-none');
+                });
+
+                closeButton.addEventListener('click', function() {
+                    brandsMenu.classList.add('d-none');
+                });
+            }
+        });
+
+        $(document).ready(function() {
+            let searchTimeout;
+            let selectedBrand = new URLSearchParams(window.location.search).get('brand') || '';
+
+            // Fungsi utama untuk load katalog
+            function loadKatalog(page = 1) {
+                $.ajax({
+                    url: `/katalog/get?page=${page}`,
+                    method: 'GET',
+                    data: {
+                        search: $('input[name="search"]').val(),
+                        sort: $('#sort').val(),
+                        brand: selectedBrand
+                    },
+                    success: function(res) {
+                        // Update hanya bagian produk + pagination
+                        $('#katalog-list-container').html(res.html);
+                        $('.pagination-container').html(res.pagination)
+                        $('#brandsMenu').addClass('d-none');
+                    },
+                    error: function() {
+                        console.error('Gagal memuat katalog');
+                    }
+                });
+            }
+
+            loadKatalog();
+
+            // Klik brand
+            $(document).on('click', '.brand-link', function(e) {
+                e.preventDefault();
+                selectedBrand = $(this).data('brand-id');
+                loadKatalog();
             });
 
-            closeButton.addEventListener('click', function() {
-                brandsMenu.classList.add('d-none');
+            // Pagination
+            $(document).on('click', '.pagination a', function(e) {
+                e.preventDefault();
+                let page = $(this).attr('href').split('page=')[1];
+                loadKatalog(page);
             });
-        }
-    });
-</script>
+
+            // Search (debounce)
+            $(document).on('keyup', 'input[name="search"]', function() {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(function() {
+                    loadKatalog();
+                }, 300);
+            });
+
+            // Filter & Sort
+            $('#sort').on('change', function() {
+                loadKatalog();
+            });
+
+        });
+    </script>
+@endsection
