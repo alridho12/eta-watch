@@ -11,7 +11,7 @@
                 </p>
                 <div class="d-flex flex-column flex-md-row gap-2 mt-2">
                     <a href="https://wa.me/6281381866668" class="btn btn-light text-dark">Jual Sekarang</a>
-                    <a href="#" class="btn btn-outline-light">Lihat Koleksi</a>
+                    <a href="/katalog" class="btn btn-outline-light">Lihat Koleksi</a>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
             <div class="col-md-6 mb-2 mb-md-0">
                 <div class="h-100 p-5 left-trone rounded-3 d-flex flex-column justify-content-end align-items-start">
                     <p class="fs-4 text-start text-uppercase">koleksi terbaru 2025</p>
-                    <a href=""><button class="btn btn-outline-light" type="button">Lihat Koleksi</button></a>
+                    <a href="/katalog"><button class="btn btn-outline-light" type="button">Lihat Koleksi</button></a>
                 </div>
             </div>
             <div class="col-md-6">

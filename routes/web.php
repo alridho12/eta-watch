@@ -14,6 +14,9 @@ use App\Http\Controllers\KatalogController;
 // });
 
 Route::resource('/home', HomeController::class);
+Route::get('/', function () {
+    return view('pages.home.index');
+});
 
 Route::get('/katalog', [KatalogController::class, 'index'])->name('katalog.index');
 Route::get('/katalog/get', [KatalogController::class, 'getKatalog'])->name('katalog.get');

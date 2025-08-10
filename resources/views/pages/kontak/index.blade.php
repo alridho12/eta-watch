@@ -3,7 +3,7 @@
 @section('content')
     <section class="container my-md-5">
         <h2 class="text-center mb-4">Hubungi Kami</h2>
-        <p class="text-center mb-5">Tim carolinawatch.id dengan senang hati akan membantu Anda. Hubungi kami setiap kali Anda
+        <p class="text-center mb-5">Tim ETAWatch dengan senang hati akan membantu Anda. Hubungi kami setiap kali Anda
             punya pertanyaan atau hal untuk didiskusikan. Kami memastikan bahwa kepuasan customer adalah prioritas utama.
         </p>
         <p>
