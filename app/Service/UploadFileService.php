@@ -10,18 +10,26 @@ class UploadFileService
     {
         $img = $data[$field];
 
-        // Check if the directory exists
-        if (!Storage::disk('public')->exists($path)) {
-            // Create the directory if it doesn't exist
-            Storage::disk('public')->makeDirectory($path);
+        // Path tujuan di dalam public_html/public
+        $destinationPath = public_path('storage/' . $path);
+
+        // Buat folder jika belum ada
+        if (!file_exists($destinationPath)) {
+            mkdir($destinationPath, 0775, true);
         }
 
-        $img->store($path, 'public');
+        // Pindahkan file ke folder public/storage/gambar-katalog
+        $img->move($destinationPath, $img->hashName());
 
+        // Hapus gambar lama jika ada
         if ($oldImage) {
-            Storage::disk('public')->delete("$path/$oldImage");
+            $oldPath = $destinationPath . '/' . $oldImage;
+            if (file_exists($oldPath)) {
+                unlink($oldPath);
+            }
         }
 
+        // Kembalikan nama file saja
         return $img->hashName();
     }
 
