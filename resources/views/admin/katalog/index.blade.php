@@ -236,8 +236,9 @@
         function initializeFormForEdit(modalSelector, data) {
             setSelect2Value(modalSelector, 'status', data.status);
             setSelect2Value(modalSelector, 'fk_id_brand', data.fk_id_brand);
+            const BASE_IMAGE_URL = "{{ url('public/storage/gambar-katalog') }}";
             if (data.gambar) {
-                const imageUrl = `public/storage/gambar-katalog/${data.gambar}`;
+                const imageUrl = `${BASE_IMAGE_URL}/${data.gambar}`;
                 $(`${modalSelector} #preview_gambar`).attr('src', imageUrl).show(); // tampilkan preview
                 $(`${modalSelector} [name="gambar"]`).attr('required', false);
             } else {
