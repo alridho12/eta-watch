@@ -38,17 +38,17 @@
         <div class="py-md-1 d-flex flex-column justify-content-center align-items-center">
             <h5 class="fw-bold my-4 text-uppercase">Brand terpopuler</h5>
             <div class="group-brand d-flex justify-content-center align-items-center gap-4 flex-wrap ">
-                <a href="{{ url('/katalog') }}?brand=4"><img class="img-fluid brand-logo" src="{{ asset('images/brand/rolex.png') }}"
+                <a href="{{ url('/katalog') }}?brand=4"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/rolex.png') }}"
                         alt=""></a>
-                <a href="{{ url('/katalog') }}?brand=13"><img class="img-fluid brand-logo" src="{{ asset('images/brand/ap.png') }}"
+                <a href="{{ url('/katalog') }}?brand=13"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/ap.png') }}"
                         alt=""></a>
-                <a href="{{ url('/katalog') }}?brand=11"><img class="img-fluid brand-logo" src="{{ asset('images/brand/tag.png') }}"
+                <a href="{{ url('/katalog') }}?brand=11"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/tag.png') }}"
                         alt=""></a>
-                <a href="{{ url('/katalog') }}?brand=10"><img class="img-fluid brand-logo" src="{{ asset('images/brand/omega.png') }}"
+                <a href="{{ url('/katalog') }}?brand=10"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/omega.png') }}"
                         alt=""></a>
-                <a href="{{ url('/katalog') }}?brand=7"><img class="img-fluid brand-logo" src="{{ asset('images/brand/cartier.png') }}"
+                <a href="{{ url('/katalog') }}?brand=7"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/cartier.png') }}"
                         alt=""></a>
-                <a href="{{ url('/katalog') }}?brand=5"><img class="img-fluid brand-logo" src="{{ asset('images/brand/patek.png') }}"
+                <a href="{{ url('/katalog') }}?brand=5"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/patek.png') }}"
                         alt=""></a>
             </div>
         </div>

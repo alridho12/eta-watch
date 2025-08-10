@@ -97,19 +97,19 @@ footer p {
 }
 
 .trone {
-    background-image: url('../images/trone.jpeg');
+    background-image: url('../public/images/trone.jpeg');
     background-size: cover;
     background-position: center;
 }
 
 .left-trone {
-    background-image: url('../images/koleksi.jpeg');
+    background-image: url('../public/images/koleksi.jpeg');
     background-size: cover;
     background-position: center;
 }
 
 .right-trone {
-    background-image: url('../images/call.jpg');
+    background-image: url('../public/images/call.jpg');
     background-size: cover;
     background-position: center;
 }
