@@ -11,11 +11,11 @@
                 </div>
                 <div class="card-body text-start">
                     <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem;">{{ $item->nama_katalog }}</h6>
-                    <h6 class="card-title mb-1 text-white" style="font-size: 0.9rem; min-height: 48px;">
+                    <h6 class="card-title mb-1 text-white description" style="font-size: 0.9rem; min-height: 48px;">
                         {{ $item->deskripsi }}</h6>
                     <p class="text-light mb-1" style="font-size: 0.8rem;">
                         {{ $item->brand->nama_brand ?? '-' }}</p>
-                    <h5 class="fw-bold text-danger mb-1">Rp {{ number_format($item->harga, 0, ',', '.') }}</h5>
+                    {{-- <h5 class="fw-bold text-danger mb-1">Rp {{ number_format($item->harga, 0, ',', '.') }}</h5> --}}
                 </div>
             </div>
         </div>

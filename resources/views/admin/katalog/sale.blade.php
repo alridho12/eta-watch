@@ -357,7 +357,7 @@
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
                         type: "DELETE",
-                        url: `{{ url('admin/katalog') }}/${uuid}`,
+                        url: `{{ url('admin/katalog-sale') }}/${uuid}`,
                         dataType: 'JSON',
                         success: function(response) {
                             handleAjaxSuccess(null, response);

@@ -50,8 +50,8 @@
                     <label for="sort" class="form-label me-2 text-light mb-0">Sortir berdasarkan:</label>
                     <select class="form-select bg-dark text-light border-0 shadow-sm" id="sort" style="width: 180px;">
                         <option value="default">Terbaru</option>
-                        <option value="price-asc">Harga Terendah</option>
-                        <option value="price-desc">Harga Tertinggi</option>
+                        {{-- <option value="price-asc">Harga Terendah</option>
+                        <option value="price-desc">Harga Tertinggi</option> --}}
                     </select>
                 </div>
             </div>

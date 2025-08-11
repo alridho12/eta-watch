@@ -72,13 +72,13 @@
                                     <h6 class="card-title mb-1 text-white" style="font-size: 0.85rem; min-height: 40px;">
                                         {{ $item->katalog->nama_katalog }}
                                     </h6>
-                                    <h6 class="card-title mb-1 text-white" style="font-size: 0.85rem; min-height: 48px;">
+                                    <h6 class="card-title mb-1 text-white description" style="font-size: 0.85rem; min-height: 48px;">
                                         {{ $item->katalog->deskripsi }}
                                     </h6>
                                     <p class="text-light mb-1" style="font-size: 0.75rem;">
                                         {{ $item->katalog->brand->nama_brand ?? '-' }}
                                     </p>
-                                    @if (!is_null($item))
+                                    {{-- @if (!is_null($item))
                                         @php
                                             $sale = $item->first();
                                             $harga_normal = (int) str_replace(',', '', $sale->harga_normal);
@@ -101,7 +101,7 @@
                                         <h6 class="fw-bold text-white mb-1">
                                             Rp {{ number_format($item->katalog->harga, 0, ',', '.') }}
                                         </h6>
-                                    @endif
+                                    @endif --}}
                                 </div>
                             </div>
                             </a>
