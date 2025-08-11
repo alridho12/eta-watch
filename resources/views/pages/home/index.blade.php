@@ -61,7 +61,7 @@
                             <a href="{{$item->katalog->link}}" style="text-decoration: none">
                                 <div class="card bg-black shadow-sm border-0 h-100">
                                 <div class="position-relative">
-                                    @if ($item->isNotEmpty())
+                                    @if (!is_null($item))
                                         <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
                                     @endif
                                     <img src="{{ asset('public/storage/gambar-katalog/' . $item->katalog->gambar) }}"
