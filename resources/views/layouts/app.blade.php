@@ -3,7 +3,7 @@
 
 @include('layouts.partials.head')
 <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/6281234567890" class="whatsapp-float d-flex align-items-center text-white text-decoration-none">
+<a href="https://wa.me/6281381866668" class="whatsapp-float d-flex align-items-center text-white text-decoration-none">
     <i class="bi bi-whatsapp fs-2"></i>
     <span class="whatsapp-text ms-2">Chat Kami</span>
 </a>
