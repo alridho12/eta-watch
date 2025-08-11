@@ -21,7 +21,7 @@ class UploadFileService
             Storage::disk('public_direct')->delete("$path/$oldImage");
         }
 
-        return Storage::disk('public_direct')->url($path . '/' . $img->hashName());
+        return $img->hashName();
     }
 
     public function deleteFile(string $path, string $image)
