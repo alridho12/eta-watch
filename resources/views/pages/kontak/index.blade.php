@@ -15,7 +15,7 @@
             <br>Instagram<a style="text-decoration: none; color: #aa8b2f;"
                 href="https://www.instagram.com/etawatch.idn?igsh=MXF0cWtnc2F1dWxvNg%3D%3D">: @etawatch.idn
         </p>
-        <p>Waktu operasional : <br><span style="color: #aa8b2f">Senin-Minggu (08.00-22.00 WIB)</span>
+        <p>Waktu operasional : <br><span style="color: #aa8b2f">Senin-Minggu (10.00-20.00 WIB)</span>
         </p>
         <div class="p-md-5 p-2 my-4 location-offline d-flex flex-column justify-content-center rounded-3">
             <div class="container-fluid py-md-5 d-flex flex-column align-items-center">

@@ -22,7 +22,7 @@
                 </h6>
                 <p class="mb-1"><i class="bi bi-whatsapp me-1"></i>+62 813-8186-6668</p>
                 <p class="mb-1"><i class="bi bi-envelope me-1"></i>etawatch.id@gmail.com</p>
-                <p class="mb-0"><i class="bi bi-instagram me-1"></i>@etawatch.id</p>
+                <p class="mb-0"><i class="bi bi-instagram me-1"></i>@etawatch.idn</p>
             </div>
             <!-- Alamat -->
             <div class="col-12 col-md-4 text-start text-md-start">
@@ -31,7 +31,7 @@
                 </h6>
                 <p class="mb-1">Eta Watch, ITC BSD, Lengkong Wetan, Kec. Serpong, Kota Tangerang Selatan, Banten 15310</p>
                 <p class="mb-1">Lantai UG Blok D 3A No. 1-6</p>
-                <p class="mb-0"><i class="bi bi-clock me-1"></i>Buka: 08.00 – 22.00 WIB</p>
+                <p class="mb-0"><i class="bi bi-clock me-1"></i>Buka: 10.00 – 20.00 WIB</p>
             </div>
 
         </div>
