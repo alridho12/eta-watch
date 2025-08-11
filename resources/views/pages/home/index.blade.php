@@ -58,29 +58,29 @@
                 <div class="row g-3 justify-content-center justify-content-md-start" id="katalog-container">
                     @foreach ($katalog_sale as $index => $item)
                         <div class="col-6 col-md-4 col-lg-2 katalog-item {{ $index >= 6 ? 'd-none' : '' }}">
-                            <a href="{{$item->link}}" style="text-decoration: none">
+                            <a href="{{$item->katalog->link}}" style="text-decoration: none">
                                 <div class="card bg-black shadow-sm border-0 h-100">
                                 <div class="position-relative">
                                     @if ($item->sales->isNotEmpty())
                                         <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
                                     @endif
-                                    <img src="{{ asset('public/storage/gambar-katalog/' . $item->gambar) }}"
+                                    <img src="{{ asset('public/storage/gambar-katalog/' . $item->katalog->gambar) }}"
                                         class="card-img-top" style="height: 180px; object-fit: cover;"
-                                        alt="{{ $item->nama_katalog }}">
+                                        alt="{{ $item->katalog->nama_katalog }}">
                                 </div>
                                 <div class="card-body text-start d-flex flex-column">
                                     <h6 class="card-title mb-1 text-white" style="font-size: 0.85rem; min-height: 40px;">
                                         {{ $item->nama_katalog }}
                                     </h6>
                                     <h6 class="card-title mb-1 text-white" style="font-size: 0.85rem; min-height: 48px;">
-                                        {{ $item->deskripsi }}
+                                        {{ $item->katalog->deskripsi }}
                                     </h6>
                                     <p class="text-light mb-1" style="font-size: 0.75rem;">
-                                        {{ $item->brand->nama_brand ?? '-' }}
+                                        {{ $item->katalog->brand->nama_brand ?? '-' }}
                                     </p>
-                                    @if ($item->sales->isNotEmpty())
+                                    @if ($item->isNotEmpty())
                                         @php
-                                            $sale = $item->sales->first();
+                                            $sale = $item->first();
                                             $harga_normal = (int) str_replace(',', '', $sale->harga_normal);
                                             $harga_sales = (int) str_replace(',', '', $sale->harga_sales);
                                             $diskon =

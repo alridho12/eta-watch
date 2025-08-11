@@ -11,18 +11,17 @@ class UploadFileService
         $img = $data[$field];
 
         // Check if the directory exists
-        if (!Storage::disk('public')->exists($path)) {
-            // Create the directory if it doesn't exist
-            Storage::disk('public')->makeDirectory($path);
+        if (!Storage::disk('public_direct')->exists($path)) {
+            Storage::disk('public_direct')->makeDirectory($path);
         }
 
-        $img->store($path, 'public');
+        $img->store($path, 'public_direct');
 
         if ($oldImage) {
-            Storage::disk('public')->delete("$path/$oldImage");
+            Storage::disk('public_direct')->delete("$path/$oldImage");
         }
 
-        return $img->hashName();
+        return Storage::disk('public_direct')->url($path . '/' . $img->hashName());
     }
 
     public function deleteFile(string $path, string $image)

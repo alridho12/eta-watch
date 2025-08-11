@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Katalog;
+use App\Models\Sale;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,7 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $katalog_sale = Katalog::with('sales')->get();
+        $katalog_sale = Sale::with('katalog')->get();
 
         return view('pages.home.index', compact('katalog_sale'));
     }
