@@ -78,7 +78,7 @@
                                     <p class="text-light mb-1" style="font-size: 0.75rem;">
                                         {{ $item->katalog->brand->nama_brand ?? '-' }}
                                     </p>
-                                    @if ($item->isNotEmpty())
+                                    @if (!is_null($item))
                                         @php
                                             $sale = $item->first();
                                             $harga_normal = (int) str_replace(',', '', $sale->harga_normal);
@@ -99,7 +99,7 @@
                                         </p>
                                     @else
                                         <h6 class="fw-bold text-white mb-1">
-                                            Rp {{ number_format($item->harga, 0, ',', '.') }}
+                                            Rp {{ number_format($item->katalog->harga, 0, ',', '.') }}
                                         </h6>
                                     @endif
                                 </div>
