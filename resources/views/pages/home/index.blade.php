@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="card-body text-start d-flex flex-column">
                                     <h6 class="card-title mb-1 text-white" style="font-size: 0.85rem; min-height: 40px;">
-                                        {{ $item->nama_katalog }}
+                                        {{ $item->katalog->nama_katalog }}
                                     </h6>
                                     <h6 class="card-title mb-1 text-white" style="font-size: 0.85rem; min-height: 48px;">
                                         {{ $item->katalog->deskripsi }}
