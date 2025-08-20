@@ -52,7 +52,7 @@
                         alt=""></a>
             </div>
         </div>
-        <div class="py-md-1 my-5">
+        {{-- <div class="py-md-1 my-5">
             <h5 class="fw-bold my-4 text-uppercase text-center">Jam Tangan Promo</h5>
             <div class="container">
                 <div class="row g-3 justify-content-center justify-content-md-start" id="katalog-container">
@@ -78,7 +78,7 @@
                                     <p class="text-light mb-1" style="font-size: 0.75rem;">
                                         {{ $item->katalog->brand->nama_brand ?? '-' }}
                                     </p>
-                                    {{-- @if (!is_null($item))
+                                    @if (!is_null($item))
                                         @php
                                             $sale = $item->first();
                                             $harga_normal = (int) str_replace(',', '', $sale->harga_normal);
@@ -101,7 +101,7 @@
                                         <h6 class="fw-bold text-white mb-1">
                                             Rp {{ number_format($item->katalog->harga, 0, ',', '.') }}
                                         </h6>
-                                    @endif --}}
+                                    @endif
                                 </div>
                             </div>
                             </a>
@@ -114,7 +114,7 @@
                     <button class="btn btn-light" id="lihat-semua">Lihat Semua</button>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <div class="">
