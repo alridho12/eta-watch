@@ -1,13 +1,23 @@
 <header class="mb-auto w-100 position-fixed top-0 start-0 end-0 z-3 bg-dark">
-    <div class="bg-black dark-shadow py-2 px-3 d-flex justify-content-md-center justify-content-between  align-items-center">
+    {{-- <div class="bg-black dark-shadow py-2 px-3 d-flex justify-content-md-center justify-content-between  align-items-center">
         <!-- Logo -->
-        <img class="logo d-none" src="{{ asset('public/images/logos.png') }}" alt="Logo">
+        <img class="logo" src="{{ asset('public/images/logos.png') }}" alt="Logo">
         <p class="fs-4 d-block d-md-none mb-0">ETAwatch.</p>
         <!-- Hamburger icon (only mobile) -->
         <button class="btn text-white d-md-none" id="menuToggle" style="font-size: 1.5rem;">
             <i class="bi bi-list"></i>
         </button>
+    </div> --}}
+    <div class="bg-black dark-shadow py-2 px-3 d-flex justify-content-center align-items-center">
+        <!-- Tulisan ETAwatch -->
+        <p class="fs-4 mb-0 text-white">ETAwatch.</p>
+
+        <!-- Hamburger icon (hanya mobile) -->
+        <button class="btn text-white d-md-none ms-auto" id="menuToggle" style="font-size: 1.5rem;">
+            <i class="bi bi-list"></i>
+        </button>
     </div>
+
 
     <!-- Navigation Links -->
     <nav id="mainNav" class="nav nav-masthead pb-1 pt-2 px-0 justify-content-center text-uppercase d-none d-md-flex">
