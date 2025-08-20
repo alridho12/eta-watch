@@ -8,7 +8,7 @@
             <i class="bi bi-list"></i>
         </button>
     </div> --}}
-    <div class="bg-black dark-shadow py-2 px-3 d-flex align-items-center position-relative">
+    <div class="bg-black dark-shadow py-2 py-md-4 px-3 d-flex align-items-center position-relative">
         <!-- Tulisan ETAwatch -->
         <p class="fs-4 mb-0 text-white position-absolute top-50 start-50 translate-middle">
             ETAwatch.
