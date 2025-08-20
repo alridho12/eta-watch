@@ -5,7 +5,7 @@
         <div class="p-md-5 p-2 mb-4 rounded-3 trone position-relative overflow-hidden">
             <p class="container-fluid d-md-block d-none fw-light fs-6 text-end mb-0">ETAWatch.</p>
             {{-- <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div> --}}
-            <div class="container-fluid py-3 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
+            {{-- <div class="container-fluid py-3 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
                 <h1 class="display-5 fw-semibold text-uppercase text-start">Jual Beli Jam Tangan Mewah </h1>
                 <p class="col-md-7 fs-4 text-start text-break fw-lighter">Temukan koleksi eksklusif atau jual koleksi Anda.
                 </p>
@@ -13,14 +13,40 @@
                     <a href="https://wa.me/6281381866668" class="btn btn-light text-dark">Jual Sekarang</a>
                     <a href="/katalog" class="btn btn-outline-light">Lihat Koleksi</a>
                 </div>
+            </div> --}}
+            <div class="container-fluid py-3 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
+                <!-- Judul Utama -->
+                <h1 class="fw-bold text-uppercase lh-1 mb-3" style="font-size: 3rem;">
+                    Jual Beli <br>
+                    Jam <br>
+                    Mewah
+                </h1>
+
+                <!-- Tagline -->
+                <p class="fs-5 fw-semibold text-secondary mb-4">
+                    Presisi - Prestise - Abadi
+                </p>
+
+                <!-- Tombol -->
+                <div class="d-flex flex-column flex-md-row gap-2">
+                    <a href="https://wa.me/6281381866668" class="btn btn-light text-dark fw-semibold">
+                        Jual Sekarang
+                    </a>
+                    <a href="/katalog" class="btn btn-outline-light fw-semibold">
+                        Lihat Koleksi
+                    </a>
+                </div>
             </div>
+
         </div>
 
         <div class="row align-items-md-stretch">
             <div class="col-md-6 mb-2 mb-md-0">
                 <div class="h-100 p-5 left-trone rounded-3 d-flex flex-column justify-content-end align-items-start">
-                    <p class="fs-4 text-start text-uppercase">koleksi terbaru 2025</p>
-                    <a href="/katalog"><button class="btn btn-outline-light" type="button">Lihat Koleksi</button></a>
+                    <p class="fs-4 text-start text-uppercase">Temukan konten menarik</p>
+                    <a
+                        href="https://www.instagram.com/etawatch.idn?utm_source=ig_web_button_share_sheet&igsh=NWtteHZxdm9ta24y"><button
+                            class="btn btn-outline-light" type="button">Kunjungi Instagram</button></a>
                 </div>
             </div>
             <div class="col-md-6">
@@ -38,18 +64,18 @@
         <div class="py-md-1 d-flex flex-column justify-content-center align-items-center">
             <h5 class="fw-bold my-4 text-uppercase">Brand terpopuler</h5>
             <div class="group-brand d-flex justify-content-center align-items-center gap-4 flex-wrap ">
-                <a href="{{ url('/katalog') }}?brand=4"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/rolex.png') }}"
-                        alt=""></a>
-                <a href="{{ url('/katalog') }}?brand=13"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/ap.png') }}"
-                        alt=""></a>
-                <a href="{{ url('/katalog') }}?brand=11"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/tag.png') }}"
-                        alt=""></a>
-                <a href="{{ url('/katalog') }}?brand=10"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/omega.png') }}"
-                        alt=""></a>
-                <a href="{{ url('/katalog') }}?brand=7"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/cartier.png') }}"
-                        alt=""></a>
-                <a href="{{ url('/katalog') }}?brand=5"><img class="img-fluid brand-logo" src="{{ asset('public/images/brand/patek.png') }}"
-                        alt=""></a>
+                <a href="{{ url('/katalog') }}?brand=4"><img class="img-fluid brand-logo"
+                        src="{{ asset('public/images/brand/rolex.png') }}" alt=""></a>
+                <a href="{{ url('/katalog') }}?brand=13"><img class="img-fluid brand-logo"
+                        src="{{ asset('public/images/brand/ap.png') }}" alt=""></a>
+                <a href="{{ url('/katalog') }}?brand=11"><img class="img-fluid brand-logo"
+                        src="{{ asset('public/images/brand/tag.png') }}" alt=""></a>
+                <a href="{{ url('/katalog') }}?brand=10"><img class="img-fluid brand-logo"
+                        src="{{ asset('public/images/brand/omega.png') }}" alt=""></a>
+                <a href="{{ url('/katalog') }}?brand=7"><img class="img-fluid brand-logo"
+                        src="{{ asset('public/images/brand/cartier.png') }}" alt=""></a>
+                <a href="{{ url('/katalog') }}?brand=5"><img class="img-fluid brand-logo"
+                        src="{{ asset('public/images/brand/patek.png') }}" alt=""></a>
             </div>
         </div>
         {{-- <div class="py-md-1 my-5">
