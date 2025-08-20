@@ -243,6 +243,10 @@ footer p {
     .description{
         min-height: 70px;
     }
+
+    .trone{
+        background-position:right center;
+    }
 }
 
 
