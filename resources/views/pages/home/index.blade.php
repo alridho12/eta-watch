@@ -143,7 +143,7 @@
         </div> --}}
     </div>
 
-    <div class="">
+    <div class="bg-black">
         <div class="p-md-5 p-2 mb-4 location d-flex flex-column justify-content-end">
             {{-- <div class="container-fluid py-md-5 d-flex flex-column align-items-start">
                 <h1 class="display-5 fw-bold text-uppercase text-start">ETAwatch store.</h1>

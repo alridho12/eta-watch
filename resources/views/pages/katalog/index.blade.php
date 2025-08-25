@@ -3,7 +3,7 @@
 @section('content')
     <div class="container py-md-3 mb-5">
         <div class="rounded-3 bg-black">
-            <div class="trone-katalog py-2">
+            <div class="trone-katalog p-md-5 p-2">
                 <p class="container-fluid fw-light fs-6 text-end mb-0 my-1">ETAWatch.</p>
                 {{-- <div
                     class="container-fluid h-100 py-3 py-md-5 d-flex flex-column justify-content-end align-items-start position-relative text-white">
