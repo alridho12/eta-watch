@@ -233,6 +233,10 @@ footer p {
   border-top-right-radius: 0;
 }
 
+.katalog-title{
+    font-size: 3rem !important;
+}
+
 
 @media (max-width: 768px) {
     .whatsapp-float {
@@ -246,8 +250,12 @@ footer p {
     }
 
     .py-7{
-        padding-top: 7rem !important;
-        padding-bottom: 7rem !important;
+        padding-top: 8rem !important;
+        padding-bottom: 8rem !important;
+    }
+
+    .katalog-title{
+        font-size: 2rem !important;
     }
 
     /* .trone{

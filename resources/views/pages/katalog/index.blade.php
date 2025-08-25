@@ -12,14 +12,14 @@
                 <div
                     class="container-fluid py-7 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
                     <!-- Judul Utama -->
-                    <h1 class="fw-bold text-uppercase lh-1 mb-3 text-start" style="font-size: 3rem;">
+                    <h1 class="fw-bold text-uppercase lh-1 mb-3 text-start katalog-title">
                         Jual Beli <br>
                         Jam <br>
                         Mewah
                     </h1>
 
                     <!-- Tagline -->
-                    <p class="fs-5 fw-semibold text-secondary mb-4">
+                    <p class="fs-5 fw-semibold text-secondary mb-4 mt-md-0 mt-3">
                         Presisi - Prestise - Abadi
                     </p>
 
