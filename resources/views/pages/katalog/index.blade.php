@@ -5,9 +5,33 @@
         <div class="rounded-3 bg-black">
             <div class="trone-katalog py-2">
                 <p class="container-fluid fw-light fs-6 text-end mb-0 my-1">ETAWatch.</p>
-                <div
+                {{-- <div
                     class="container-fluid h-100 py-3 py-md-5 d-flex flex-column justify-content-end align-items-start position-relative text-white">
                     <h1 class="display-6 fw-semibold text-uppercase text-start">KOLEKSI KAMI. </h1>
+                </div> --}}
+                <div
+                    class="container-fluid py-3 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
+                    <!-- Judul Utama -->
+                    <h1 class="fw-bold text-uppercase lh-1 mb-3 text-start" style="font-size: 3rem;">
+                        Jual Beli <br>
+                        Jam <br>
+                        Mewah
+                    </h1>
+
+                    <!-- Tagline -->
+                    <p class="fs-5 fw-semibold text-secondary mb-4">
+                        Presisi - Prestise - Abadi
+                    </p>
+
+                    <!-- Tombol -->
+                    {{-- <div class="d-flex flex-column flex-md-row gap-2">
+                        <a href="https://wa.me/6281381866668" class="btn btn-light text-dark fw-semibold">
+                            Jual Sekarang
+                        </a>
+                        <a href="/katalog" class="btn btn-outline-light fw-semibold">
+                            Lihat Koleksi
+                        </a>
+                    </div> --}}
                 </div>
             </div>
         </div>

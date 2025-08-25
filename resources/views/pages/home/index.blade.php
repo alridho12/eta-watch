@@ -5,7 +5,7 @@
         <div class="p-md-5 p-2 mb-4 rounded-3 trone position-relative overflow-hidden">
             <p class="container-fluid d-md-block d-none fw-light fs-6 text-end mb-0">ETAWatch.</p>
             {{-- <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div> --}}
-            {{-- <div class="container-fluid py-3 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
+            <div class="container-fluid py-3 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
                 <h1 class="display-5 fw-semibold text-uppercase text-start">Jual Beli Jam Tangan Mewah </h1>
                 <p class="col-md-7 fs-4 text-start text-break fw-lighter">Temukan koleksi eksklusif atau jual koleksi Anda.
                 </p>
@@ -13,8 +13,8 @@
                     <a href="https://wa.me/6281381866668" class="btn btn-light text-dark">Jual Sekarang</a>
                     <a href="/katalog" class="btn btn-outline-light">Lihat Koleksi</a>
                 </div>
-            </div> --}}
-            <div class="container-fluid py-3 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
+            </div>
+            {{-- <div class="container-fluid py-3 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
                 <!-- Judul Utama -->
                 <h1 class="fw-bold text-uppercase lh-1 mb-3 text-start" style="font-size: 3rem;">
                     Jual Beli <br>
@@ -36,7 +36,7 @@
                         Lihat Koleksi
                     </a>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
 
@@ -145,11 +145,11 @@
 
     <div class="">
         <div class="p-md-5 p-2 mb-4 location d-flex flex-column justify-content-end">
-            <div class="container-fluid py-md-5 d-flex flex-column align-items-start">
+            {{-- <div class="container-fluid py-md-5 d-flex flex-column align-items-start">
                 <h1 class="display-5 fw-bold text-uppercase text-start">ETAwatch store.</h1>
                 <a href="https://maps.app.goo.gl/RUHroy1mDYX6Asqp9"><button class="btn btn-light" type="button">Lokasi
                         Toko offline</button></a>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection
