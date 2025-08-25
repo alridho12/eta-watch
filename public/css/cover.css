@@ -245,6 +245,11 @@ footer p {
         min-height: 70px;
     }
 
+    .py-7{
+        padding-top: 7rem !important;
+        padding-bottom: 7rem !important;
+    }
+
     /* .trone{
         background-position:right center;
     } */

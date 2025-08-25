@@ -10,7 +10,7 @@
                     <h1 class="display-6 fw-semibold text-uppercase text-start">KOLEKSI KAMI. </h1>
                 </div> --}}
                 <div
-                    class="container-fluid py-3 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
+                    class="container-fluid py-7 py-md-5 d-flex flex-column align-items-start position-relative z-1 text-white">
                     <!-- Judul Utama -->
                     <h1 class="fw-bold text-uppercase lh-1 mb-3 text-start" style="font-size: 3rem;">
                         Jual Beli <br>
